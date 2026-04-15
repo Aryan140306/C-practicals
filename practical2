@@ -1,0 +1,28 @@
+#include <iostream>
+using namespace std;
+
+void removeDuplicates(int arr[], int size) {
+    for (int i = 0; i < size; i++) {
+        bool duplicate = false;
+
+        for (int j = 0; j < i; j++) {
+            if (arr[i] == arr[j]) {
+                duplicate = true;
+                break;
+            }
+        }
+
+        if (!duplicate) {
+            cout << arr[i] << " ";
+        }
+    }
+}
+
+int main() {
+    int arr[] = {1, 2, 2, 3, 4, 3};
+    int size = 6;
+
+    removeDuplicates(arr, size);
+
+    return 0;
+}
