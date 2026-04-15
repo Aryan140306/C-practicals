@@ -1,0 +1,26 @@
+```cpp
+#include <iostream>
+using namespace std;
+
+int main(int count, char* values[]) {
+    int number;
+    int sum = 0;
+
+    // Check if number is given in command line
+    if (count > 1) {
+        number = atoi(values[1]);   // convert text to number
+    } else {
+        cout << "Enter a number: ";
+        cin >> number;
+    }
+
+    // Add numbers from 1 to number
+    for (int i = 1; i <= number; i++) {
+        sum = sum + i;
+    }
+
+    cout << "Sum is: " << sum;
+
+    return 0;
+}
+```
